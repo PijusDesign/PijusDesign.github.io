@@ -200,16 +200,18 @@ footer.site-foot a {
 }
 
 .site-head-logo {
-    font-family: var(--font-sans-serif);
-    flex-shrink: 0;
-    display: block;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
     color: var(--color-base);
-    font-size: 3rem;
-    line-height: 1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    flex-shrink: 0;
+}
+
+.site-head-logo img {
+    display: block;
+    height: 42px;   /* Ajusta este valor a tu gusto */
+    width: auto;
 }
 
 .site-head-logo:hover {
@@ -381,7 +383,7 @@ body.dark .logo-dark {
 }
 
 .site-head-logo img {
-    height: 42px;   /* prueba 42, 48 o 52 */
+    height: 60px;   /* prueba 42, 48 o 52 */
     width: auto;
     display: block;
 }
