@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3333 3317.64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1" data-name="Capa 1" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <g id="Capa_1-2" data-name="Capa 1" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+      <path class="cls-1" d="M2580.41,0H752.59C336.95,0,0,336.95,0,752.59v1812.45c0,415.65,336.95,752.59,752.59,752.59h1827.81c415.65,0,752.59-336.95,752.59-752.59V752.59C3333,336.95,2996.05,0,2580.41,0ZM1085.44,2683.78h-456.79v-1397.84h456.79v1397.84ZM857.08,1090.58c-126.09,0-228.43-102.33-228.43-228.36s102.33-228.36,228.43-228.36,228.36,102.27,228.36,228.36-102.33,228.36-228.36,228.36ZM2704.35,2683.78h-439.15v-677.86c-.07-155-3.25-354.46-228.43-354.46s-263.71,168.67-263.71,343.19v689.12h-438.76v-1397.84h421.12v215.86h6.12c58.65-105.2,202.06-215.86,415.91-215.86,444.68,0,526.9,276.73,526.9,636.72v761.12h0Z"/>
+    </g>
+  </g>
+</svg>
