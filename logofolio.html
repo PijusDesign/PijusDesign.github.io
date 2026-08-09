@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Hidalgo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Inicio">
+                <video autoplay loop muted playsinline preload="metadata">
+                    <source src="videos/Pijus_isotipo.webm" type="video/webm">
+                </video>
+            </a>
+            <div class="header-right">
+                <nav aria-label="Navegación principal">
+                    <a href="index.html">PROYECTOS</a>
+                    <a href="logofolio.html">LOGOFOLIO</a>
+                    <a href="index.html#about">SOBRE MÍ</a>
+                    <a href="contacto.html">CONTACTO</a>
+                </nav>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                    <img src="images/behance.svg" alt="Behance">
+                </a>
+            </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="logofolio">
+            <div class="projects-grid">
+                <div class="project logo-item">
+                    <img src="images/logo1.jpg" alt="Logo 1">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo2.jpg" alt="Logo 2">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo3.jpg" alt="Logo 3">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo4.jpg" alt="Logo 4">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo5.jpg" alt="Logo 5">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo6.jpg" alt="Logo 6">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo7.jpg" alt="Logo 7">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo8.jpg" alt="Logo 8">
+                </div>
+                <div class="project logo-item">
+                    <img src="images/logo9.jpg" alt="Logo 9">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>pijus 2026</p>
+    </footer>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

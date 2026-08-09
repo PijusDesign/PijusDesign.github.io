@@ -19,9 +19,10 @@
             </a>
             <div class="header-right">
                 <nav aria-label="Navegación principal">
-                    <a href="#projects">PROYECTOS</a>
-                    <a href="#about">SOBRE MÍ</a>
-                    <a href="#contact">CONTACTO</a>
+                    <a href="index.html">PROYECTOS</a>
+                    <a href="logofolio.html">LOGOFOLIO</a>
+                    <a href="index.html#about">SOBRE MÍ</a>
+                    <a href="contacto.html">CONTACTO</a>
                 </nav>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -35,6 +36,11 @@
         </div>
     </header>
 <main>
+    <a href="index.html" class="back-arrow" id="backArrow" aria-label="Volver a proyectos">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+    </a>
     <section class="project-intro">
     <div class="project-preview">
         <video autoplay loop muted playsinline>
@@ -43,9 +49,9 @@
     </div>
         <div class="project-description">
         <div class="project-text">
-          <h1>ISOTYPE EXPLORATIONS</h1>
+          <h1>CREATIVIDADES CON ISOTIPO</h1>
           <p>
-              A collection of personal explorations using my own isotype. This project showcases experiments with motion, composition, materials and branding, developed as part of my personal visual identity.
+              Una colección de creatividades personales utilizando mi isotipo. Este proyecto reúne experimentos de diferentes técnicas desarrollados como parte de mi identidad visual personal.
           </p>
         </div>
     </div>
@@ -55,15 +61,27 @@
         <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Plástico.mp4" type="video/mp4"></video>
         <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Toon.mp4" type="video/mp4"></video>
         <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Inflado.mp4" type="video/mp4"></video>
-        <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Dibujo.mp4" type="video/mp4"></video>
+        <img src="images/Pijus_Isotipo_Ámbar.jpg">
         <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Cristal.mp4" type="video/mp4"></video>
-        <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Dibujo.mp4" type="video/mp4"></video>
-        <video autoplay loop muted playsinline><source src="videos/Pijus_Isotipo_Dibujo.mp4" type="video/mp4"></video>
     </section>
 </main>
-    <footer>
+<footer>
         <p>pijus 2026</p>
     </footer>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

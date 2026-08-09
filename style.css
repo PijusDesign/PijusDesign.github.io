@@ -6,6 +6,13 @@
 }
 
 @font-face{
+    font-family:"Bebas Neue Regular";
+    src:url("fonts/bebasneue-regular.otf") format("opentype");
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
     font-family:"Geist";
     src:url("fonts/geist-thin.otf") format("opentype");
     font-weight:100;
@@ -30,12 +37,20 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 /* ---------- GENERAL ---------- */
 
 body{
     font-family:"Geist",sans-serif;
     background:var(--bg);
     color:var(--text);
+}
+
+main{
+    display:flow-root;
 }
 
 .container{
@@ -141,6 +156,14 @@ nav a:hover{
     width:100%;
 }
 
+#logofolio{
+    width:100%;
+}
+
+.logo-item{
+    cursor:pointer;
+}
+
 .projects-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -170,29 +193,34 @@ nav a:hover{
     transition:transform .4s ease;
 }
 
-.project:hover video{
-    transform:scale(1.05);
-}
-
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.55);
+    background:rgba(0,0,0,.80);
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
+    gap:8px;
     opacity:0;
     transition:opacity .3s ease;
 }
 
 .overlay h3{
+    font-family:"Bebas Neue",sans-serif;
     color:white;
     font-size:24px;
-    font-weight:500;
+    font-weight:700;
 }
 
-.project:hover img{
-    transform:scale(1.05);
+.overlay .category{
+    font-family:"Bebas Neue Regular",sans-serif;
+    color:white;
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    opacity:.70;
 }
 
 .project:hover .overlay{
@@ -210,9 +238,14 @@ nav a:hover{
 .project-preview{
     width:100%;
     height:100%;
+    position:relative;
+    overflow:hidden;
 }
 
-.project-preview video{
+.project-preview video,
+.project-preview img{
+    position:absolute;
+    inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
@@ -276,4 +309,219 @@ footer p {
     font-weight: 700;
     color: #999; /* ajusta al color de texto que uses en el resto del sitio */
     letter-spacing: 0.5px;
+}
+
+/* ---------- BACK ARROW ---------- */
+
+.back-arrow{
+    position:sticky;
+    top:32px;
+    margin:32px 0 -80px 32px;
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg);
+    border:1px solid var(--text);
+    border-radius:10px;
+    z-index:1000;
+    text-decoration:none;
+    transition:transform .25s ease, background-color .25s ease;
+}
+
+.back-arrow:hover{
+    background:var(--header);
+    transform:translateX(-4px);
+}
+
+.back-arrow svg{
+    width:20px;
+    height:20px;
+    display:block;
+}
+
+.back-arrow svg path{
+    stroke:var(--text);
+    fill:none;
+}
+
+/* ---------- CONTACT ---------- */
+
+#contact{
+    padding:140px 0;
+}
+
+.section-title{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:56px;
+    margin-bottom:60px;
+}
+
+.contact-form{
+    max-width:640px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+}
+
+.form-field label{
+    display:block;
+    font-family:"Bebas Neue Regular",sans-serif;
+    font-size:14px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--text-light);
+    margin-bottom:8px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:16px 18px;
+    background:var(--bg);
+    border:1px solid var(--text);
+    border-radius:6px;
+    font-family:"Geist",sans-serif;
+    font-size:16px;
+    color:var(--text);
+    resize:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:var(--text-light);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:var(--text);
+    box-shadow:0 0 0 1px var(--text);
+}
+
+.btn-submit{
+    align-self:flex-start;
+    padding:16px 44px;
+    background:var(--bg);
+    border:1px solid var(--text);
+    border-radius:10px;
+    font-family:"Bebas Neue",sans-serif;
+    font-size:20px;
+    letter-spacing:1px;
+    color:var(--text);
+    cursor:pointer;
+    transition:background-color .25s ease;
+}
+
+.btn-submit:hover{
+    background:var(--header);
+}
+
+.btn-submit:disabled{
+    opacity:.5;
+    cursor:default;
+}
+
+.form-status{
+    font-family:"Geist",sans-serif;
+    font-size:15px;
+    margin-top:4px;
+}
+
+.form-status.success{
+    color:#2e7d32;
+}
+
+.form-status.error{
+    color:#c62828;
+}
+
+/* ---------- LIGHTBOX ---------- */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    cursor:pointer;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox-content img,
+.lightbox-content video{
+    max-width:90vw;
+    max-height:90vh;
+    width:auto;
+    height:auto;
+    display:block;
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:fixed;
+    top:30px;
+    right:40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.lightbox-nav{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:transparent;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:10px;
+    cursor:pointer;
+    z-index:1001;
+    transition:background-color .25s ease, border-color .25s ease;
+}
+
+.lightbox-nav:hover{
+    background:var(--header);
+    border-color:var(--header);
+}
+
+.lightbox-nav svg{
+    width:20px;
+    height:20px;
+    display:block;
+}
+
+.lightbox-nav svg path{
+    stroke:#ffffff;
+    fill:none;
+    transition:stroke .25s ease;
+}
+
+.lightbox-nav:hover svg path{
+    stroke:var(--text);
+}
+
+.lightbox-prev{
+    left:40px;
+}
+
+.lightbox-next{
+    right:40px;
+}
+
+.project-gallery img,
+.project-gallery video{
+    cursor:pointer;
 }
