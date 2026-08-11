@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.documentElement.dataset.page = currentPage;
+    </script>
 </head>
 <body>
     <header>
@@ -17,74 +21,163 @@
                     <source src="videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
             </a>
+
             <div class="header-right">
                 <nav aria-label="Navegación principal">
                     <a href="index.html">PROYECTOS</a>
                     <a href="logofolio.html">LOGOFOLIO</a>
-                    <a href="index.html#about">SOBRE MÍ</a>
+                    <a href="sobremi.html">SOBRE MÍ</a>
                     <a href="contacto.html">CONTACTO</a>
                 </nav>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                    <img src="images/behance.svg" alt="Behance">
-                </a>
-            </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                        <img src="images/behance.svg" alt="Behance">
+                    </a>
+                </div>
             </div>
         </div>
     </header>
+
     <main>
+        <a href="#" class="back-arrow back-arrow-top" id="backToTop" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </a>
+
         <section id="logofolio">
             <div class="projects-grid">
-                <div class="project logo-item">
-                    <img src="images/logo1.jpg" alt="Logo 1">
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_AnaWolf.jpg" alt="Logo Ana Wolf" class="logo-bw">
+                        <img src="images/logofolio_AnaWolf_hover.jpg" alt="Logo Ana Wolf color" class="logo-color">
+                    </div>
+                    <p class="logo-title">Ana Wolf</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo2.jpg" alt="Logo 2">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_BUG.jpg" alt="Logo BUG//" class="logo-bw">
+                        <img src="images/logofolio_BUG_hover.jpg" alt="Logo BUG// color" class="logo-color">
+                    </div>
+                    <p class="logo-title">BUG//</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo3.jpg" alt="Logo 3">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_Celeste.jpg" alt="Logo Celeste" class="logo-bw">
+                        <img src="images/logofolio_Celeste_hover.jpg" alt="Logo Celeste color" class="logo-color">
+                    </div>
+                    <p class="logo-title">Celeste</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo4.jpg" alt="Logo 4">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_ElecFox.jpg" alt="Logo Elec Fox" class="logo-bw">
+                        <img src="images/logofolio_ElecFox_hover.jpg" alt="Logo Elec Fox color" class="logo-color">
+                    </div>
+                    <p class="logo-title">Elec Fox</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo5.jpg" alt="Logo 5">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_FoodSupplAI.jpg" alt="Logo FoodSupplAI" class="logo-bw">
+                        <img src="images/logofolio_FoodSupplAI_hover.jpg" alt="Logo FoodSupplAI color" class="logo-color">
+                    </div>
+                    <p class="logo-title">FoodSupplAI</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo6.jpg" alt="Logo 6">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_GEMCULT.jpg" alt="Logo GEMCULT" class="logo-bw">
+                        <img src="images/logofolio_GEMCULT_hover.jpg" alt="Logo GEMCULT color" class="logo-color">
+                    </div>
+                    <p class="logo-title">GEMCULT</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo7.jpg" alt="Logo 7">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_HIDDEN DENIA.jpg" alt="Logo HIDDEN DENIA" class="logo-bw">
+                        <img src="images/logofolio_HIDDEN DENIA_hover.jpg" alt="Logo HIDDEN DENIA color" class="logo-color">
+                    </div>
+                    <p class="logo-title">HIDDEN DENIA</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo8.jpg" alt="Logo 8">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_kbdmania.jpg" alt="Logo kbdmania" class="logo-bw">
+                        <img src="images/logofolio_kbdmania_hover.jpg" alt="Logo kbdmania color" class="logo-color">
+                    </div>
+                    <p class="logo-title">kbdmania</p>
                 </div>
-                <div class="project logo-item">
-                    <img src="images/logo9.jpg" alt="Logo 9">
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_DarkChocolatier.jpg" alt="Logo Dark Chocolatier" class="logo-bw">
+                        <img src="images/logofolio_DarkChocolatier_hover.jpg" alt="Logo Dark Chocolatier color" class="logo-color">
+                    </div>
+                    <p class="logo-title">Dark Chocolatier</p>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_RAWCREW.jpg" alt="Logo RAW CREW" class="logo-bw">
+                        <img src="images/logofolio_RAWCREW_hover.jpg" alt="Logo RAW CREW color" class="logo-color">
+                    </div>
+                    <p class="logo-title">RAW CREW</p>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_RHINOBURGER.jpg" alt="Logo RHINO BURGER" class="logo-bw">
+                        <img src="images/logofolio_RHINOBURGER_hover.jpg" alt="Logo RHINO BURGER color" class="logo-color">
+                    </div>
+                    <p class="logo-title">RHINO BURGER</p>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_ELBERCIAL.jpg" alt="Logo EL BERCIAL DE SAN RAFAEL" class="logo-bw">
+                        <img src="images/logofolio_ELBERCIAL_hover.jpg" alt="Logo El Bercial de San Rafael color" class="logo-color">
+                    </div>
+                    <p class="logo-title">EL BERCIAL DE SAN RAFAEL</p>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_ManuMatt.jpg" alt="Logo ManuMatt & Partners" class="logo-bw">
+                        <img src="images/logofolio_ManuMatt_hover.jpg" alt="Logo ManuMatt & Partners color" class="logo-color">
+                    </div>
+                    <p class="logo-title">ManuMatt & Partners</p>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_NIZVOS.jpg" alt="Logo Nizvos" class="logo-bw">
+                        <img src="images/logofolio_NIZVOS_hover.jpg" alt="Logo Nizvos color" class="logo-color">
+                    </div>
+                    <p class="logo-title">Nizvos</p>
+                </div>
+
+                <div class="logo-item">
+                    <div class="logo-image">
+                        <img src="images/logofolio_ArrozParaBodas.jpg" alt="Logo Arroz Para Bodas" class="logo-bw">
+                        <img src="images/logofolio_ArrozParaBodas_hover.jpg" alt="Logo Arroz Para Bodas color" class="logo-color">
+                    </div>
+                    <p class="logo-title">Arroz Para Bodas</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>pijus 2026</p>
     </footer>
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">&times;</span>
-        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-        </button>
-        <div class="lightbox-content" id="lightbox-content"></div>
-        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-        </button>
-    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

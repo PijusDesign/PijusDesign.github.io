@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.documentElement.dataset.page = currentPage;
+    </script>
 </head>
 <body>
     <header>
@@ -21,49 +25,49 @@
                 <nav aria-label="Navegación principal">
                     <a href="index.html">PROYECTOS</a>
                     <a href="logofolio.html">LOGOFOLIO</a>
-                    <a href="index.html#about">SOBRE MÍ</a>
+                    <a href="sobremi.html">SOBRE MÍ</a>
                     <a href="contacto.html">CONTACTO</a>
                 </nav>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                    <img src="images/behance.svg" alt="Behance">
-                </a>
-            </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                        <img src="images/behance.svg" alt="Behance">
+                    </a>
+                </div>
             </div>
         </div>
     </header>
-<main>
-    <a href="index.html" class="back-arrow" id="backArrow" aria-label="Volver a proyectos">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-    </a>
-    <section class="project-intro">
-    <div class="project-preview">
-        <img src="images/kbdmania_portada.jpg" alt="Proyecto 2 - kbdmania Rebranding">
-    </div>
-        <div class="project-description">
-        <div class="project-text">
-          <h1>CREATIVIDADES CON ISOTIPO</h1>
-          <p>
-              Una colección de creatividades personales utilizando mi isotipo. Este proyecto reúne experimentos de diferentes técnicas desarrollados como parte de mi identidad visual personal.
-          </p>
-        </div>
-    </div>
-    </section>
+    <main>
+        <a href="index.html" class="back-arrow" id="backArrow" aria-label="Volver a proyectos">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </a>
+        <section class="project-intro">
+            <div class="project-preview">
+                <img src="images/kbdmania_portada.jpg" alt="Proyecto 2 - kbdmania Rebranding">
+            </div>
+            <div class="project-description">
+                <div class="project-text">
+                    <h1>CREATIVIDADES CON ISOTIPO</h1>
+                    <p>
+                        Una colección de creatividades personales utilizando mi isotipo. Este proyecto reúne experimentos de diferentes técnicas desarrollados como parte de mi identidad visual personal.
+                    </p>
+                </div>
+            </div>
+        </section>
         <section class="project-gallery">
-        <img src="images/kbdmania1.jpg">
-        <img src="images/kbdmania2.jpg">
-        <img src="images/kbdmania3.jpg">
-        <img src="images/kbdmania4.jpg">
-        <img src="images/kbdmania5.jpg">
-        <img src="images/kbdmania6.jpg">
-    </section>
-</main>
-<footer>
+            <img src="images/kbdmania1.jpg">
+            <img src="images/kbdmania2.jpg">
+            <img src="images/kbdmania3.jpg">
+            <img src="images/kbdmania4.jpg">
+            <img src="images/kbdmania5.jpg">
+            <img src="images/kbdmania6.jpg">
+        </section>
+    </main>
+    <footer>
         <p>pijus 2026</p>
     </footer>
     <div class="lightbox" id="lightbox">

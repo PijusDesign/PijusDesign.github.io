@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.documentElement.dataset.page = currentPage;
+    </script>
 </head>
 <body>
     <header>
@@ -19,9 +23,9 @@
             </a>
             <div class="header-right">
                 <nav aria-label="Navegación principal">
-                    <a href="#projects">PROYECTOS</a>
+                    <a href="index.html">PROYECTOS</a>
                     <a href="logofolio.html">LOGOFOLIO</a>
-                    <a href="#about">SOBRE MÍ</a>
+                    <a href="sobremi.html">SOBRE MÍ</a>
                     <a href="contacto.html">CONTACTO</a>
                 </nav>
             <div class="social-links">
@@ -31,7 +35,6 @@
                 <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
                     <img src="images/behance.svg" alt="Behance">
                 </a>
-            </div>
             </div>
         </div>
     </header>
