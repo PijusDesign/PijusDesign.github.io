@@ -1,5 +1,12 @@
 // ---------- TRANSICIÓN ENTRE PÁGINAS ----------
 
+// Evitar que las imágenes se puedan arrastrar con el ratón
+document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
+});
+
 window.addEventListener('pageshow', function() {
     document.body.classList.add('page-transition-in');
     document.body.classList.remove('page-transition-out');
@@ -109,6 +116,39 @@ document.addEventListener('click', function(e) {
 // ---------- DOM READY ----------
 
 document.addEventListener('DOMContentLoaded', function() {
+
+
+    // =====================================================
+    // MENÚ HAMBURGUESA
+    // =====================================================
+
+    const navToggle = document.getElementById('navToggle');
+    const headerRight = document.querySelector('.header-right');
+
+    if (navToggle && headerRight) {
+
+        navToggle.addEventListener('click', function() {
+            const isOpen = document.body.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Cerrar al pulsar un enlace del menú
+        headerRight.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.body.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Cerrar al pulsar fuera del panel
+        document.addEventListener('click', function(e) {
+            if (!document.body.classList.contains('nav-open')) return;
+            if (e.target.closest('.header-right') || e.target.closest('#navToggle')) return;
+            document.body.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+
+    }
 
 
     // =====================================================
@@ -233,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.addEventListener('scroll', function() {
 
-            if (window.scrollY > 700) {
+            if (window.scrollY > Math.min(window.innerHeight * 0.5, 450)) {
 
                 backToTop.classList.add('visible');
 
@@ -597,4 +637,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
+});
+
+    // ---------- COLOCA LOS PROYECTOS MÁS NUEVOS ARRIBA ----------
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.projects-grid').forEach(grid => {
+        Array.from(grid.children).reverse().forEach(child => grid.appendChild(child));
+    });
 });

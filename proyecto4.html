@@ -21,6 +21,11 @@
                     <source src="videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
             </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+
             <div class="header-right">
                 <nav aria-label="Navegación principal">
                     <a href="index.html">PROYECTOS</a>
@@ -28,6 +33,7 @@
                     <a href="sobremi.html">SOBRE MÍ</a>
                     <a href="contacto.html">CONTACTO</a>
                 </nav>
+
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <img src="images/linkedin.svg" alt="LinkedIn">
@@ -39,51 +45,63 @@
             </div>
         </div>
     </header>
+
     <main>
         <a href="index.html" class="back-arrow" id="backArrow" aria-label="Volver a proyectos">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </a>
+
         <section class="project-intro">
             <div class="project-preview">
-                <img src="images/tomati&co_portada.jpg" alt="Proyecto 4 - Tomati&Co Comunicación Visual">
+                <img src="images/bnf_portada.jpg" alt="Proyecto 4 - Bollo Natural Fruit Comunicación Visual">
             </div>
+
             <div class="project-description">
                 <div class="project-text">
-                    <h1>CREATIVIDADES CON ISOTIPO</h1>
+                    <h1>Bollo Natural Fruit</h1>
                     <p>
-                        Una colección de creatividades personales utilizando mi isotipo. Este proyecto reúne experimentos de diferentes técnicas desarrollados como parte de mi identidad visual personal.
+                        Desarrollo de piezas de comunicación visual para Bollo Natural Fruit, con presencia tanto en España como en Alemania: publicidad para revistas, banderolas, cubre-palets, packaging para cajas de fruta de gran formato, anuncios digitales y catálogo de producto.
                     </p>
                 </div>
             </div>
         </section>
+
         <section class="project-gallery">
-            <img src="images/tomati&co1.png">
-            <img src="images/tomati&co2.jpg">
-            <img src="images/tomati&co3.png">
-            <img src="images/tomati&co4.jpg">
-            <img src="images/tomati&co5.jpg">
-            <img src="images/tomati&co6.jpg">
+            <img src="images/bnf1.jpg">
+            <video autoplay loop muted playsinline>
+                <source src="videos/bnf2.mp4" type="video/mp4">
+            </video>
+            <img src="images/bnf3.jpg">
+            <img src="images/bnf4.jpg">
+            <img src="images/bnf5.png">
+            <img src="images/bnf6.png">
         </section>
     </main>
+
     <footer>
-        <p>pijus 2026</p>
+        <p>πjus 2026</p>
     </footer>
+
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close" id="lightbox-close">&times;</span>
+
         <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </button>
+
         <div class="lightbox-content" id="lightbox-content"></div>
+
         <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
         </button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

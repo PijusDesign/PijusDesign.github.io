@@ -1,21 +1,14 @@
 @font-face{
-    font-family:"Bebas Neue";
-    src:url("fonts/bebasneue-bold.otf") format("opentype");
-    font-weight:700;
-    font-style:normal;
-}
-
-@font-face{
-    font-family:"Bebas Neue Regular";
-    src:url("fonts/bebasneue-regular.otf") format("opentype");
-    font-weight:400;
+    font-family:"Oswald";
+    src:url("fonts/Oswald.ttf") format("truetype");
+    font-weight:200 700;
     font-style:normal;
 }
 
 @font-face{
     font-family:"Geist";
-    src:url("fonts/geist-thin.otf") format("opentype");
-    font-weight:100;
+    src:url("fonts/Geist.ttf") format("truetype");
+    font-weight:100 900;
     font-style:normal;
 }
 
@@ -35,6 +28,13 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+img,
+video{
+    -webkit-user-drag:none;
+    user-drag:none;
+    -webkit-touch-callout:none;
 }
 
 html{
@@ -121,18 +121,55 @@ nav{
 }
 
 nav a{
-    font-family:"Bebas Neue",sans-serif;
+    font-family:"Oswald",sans-serif;
     text-decoration:none;
     color:var(--text);
-    font-size:38px;
+    font-size:32px;
     font-weight:700;
-    letter-spacing:.00em;
+    letter-spacing:-.02em;
     opacity:1;
     transition:opacity .25s ease;
 }
 
 nav a:hover{
     opacity:.5;
+}
+
+/* ---------- NAV TOGGLE (hamburguesa) ---------- */
+
+.nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    width:32px;
+    height:32px;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    z-index:1100;
+}
+
+.nav-toggle span{
+    display:block;
+    width:100%;
+    height:3px;
+    background:var(--text);
+    border-radius:2px;
+    transition:transform .25s ease, opacity .25s ease;
+}
+
+body.nav-open .nav-toggle span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+}
+
+body.nav-open .nav-toggle span:nth-child(2){
+    opacity:0;
+}
+
+body.nav-open .nav-toggle span:nth-child(3){
+    transform:translateY(-9px) rotate(-45deg);
 }
 
 /* PROYECTOS */
@@ -275,18 +312,18 @@ html[data-page="contacto.html"] nav a[href="contacto.html"]{
 }
 
 .overlay h3{
-    font-family:"Bebas Neue",sans-serif;
+    font-family:"Oswald",sans-serif;
     color:white;
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
 }
 
 .overlay .category{
-    font-family:"Bebas Neue Regular",sans-serif;
+    font-family:"Oswald",sans-serif;
     color:white;
     font-size:18px;
     font-weight:400;
-    letter-spacing:1px;
+    letter-spacing:0px;
     text-transform:uppercase;
     opacity:.70;
 }
@@ -334,9 +371,10 @@ html[data-page="contacto.html"] nav a[href="contacto.html"]{
 }
 
 .project-description h1{
-    font-family:"Bebas Neue",sans-serif;
+    font-family:"Oswald",sans-serif;
     font-size:72px;
     margin-bottom:30px;
+    line-height: 1
 }
 
 .project-description p{
@@ -359,9 +397,49 @@ html[data-page="contacto.html"] nav a[href="contacto.html"]{
     display:block;
 }
 
+/* ---------- SOBRE MÍ ---------- */
+
+.about-photo{
+    width:100%;
+    aspect-ratio:21/9;
+    overflow:hidden;
+}
+
+.about-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+}
+
+.about-content{
+    max-width:760px;
+    margin:0 auto;
+    text-align:center;
+    padding:40px 0 80px;
+}
+
+.about-content .section-title{
+    letter-spacing:0px;
+    margin-bottom:16px;
+}
+
+.about-content p{
+    font-family:"Geist",sans-serif;
+    font-size:20px;
+    line-height:1.8;
+    color:var(--text);
+}
+
+.about-content p + p{
+    margin-top:24px;
+}
+
 /* ---------- FOOTER ---------- */
 
 footer {
+    background:#EFEFEC;
     padding-bottom: 100px;
     padding-left: 0px;
     padding-right: 0px;
@@ -372,11 +450,11 @@ footer {
 }
 
 footer p {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
+    font-family: 'Geist', sans-serif;
+    font-size: 20px;
     font-weight: 700;
     color: #999; /* ajusta al color de texto que uses en el resto del sitio */
-    letter-spacing: 0.5px;
+    letter-spacing: 0px;
 }
 
 /* ---------- BACK ARROW ---------- */
@@ -447,11 +525,11 @@ footer p {
 /* ---------- CONTACT ---------- */
 
 #contact{
-    padding:140px 0;
+    padding:80px 0;
 }
 
 .section-title{
-    font-family:"Bebas Neue",sans-serif;
+    font-family:"Oswald",sans-serif;
     font-size:56px;
     margin-bottom:60px;
 }
@@ -466,7 +544,7 @@ footer p {
 
 .form-field label{
     display:block;
-    font-family:"Bebas Neue Regular",sans-serif;
+    font-family:"Oswald",sans-serif;
     font-size:14px;
     letter-spacing:1px;
     text-transform:uppercase;
@@ -505,7 +583,7 @@ footer p {
     background:var(--bg);
     border:1px solid var(--text);
     border-radius:10px;
-    font-family:"Bebas Neue",sans-serif;
+    font-family:"Oswald",sans-serif;
     font-size:20px;
     letter-spacing:1px;
     color:var(--text);
@@ -715,4 +793,256 @@ body.page-loaded .projects-grid .project:nth-child(10) {
 
 body.page-loaded .projects-grid .project:nth-child(11) {
     transition-delay: .90s;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+/* ---------- TOUCH: overlay siempre visible ---------- */
+/* En pantallas táctiles no existe :hover, así que el
+   título/categoría de cada proyecto se muestra siempre,
+   con un velo algo más suave que en desktop. */
+@media (hover:none){
+    .overlay{
+        opacity:1;
+        background:rgba(0,0,0,.55);
+    }
+}
+
+/* ---------- TABLET (≤1024px) ---------- */
+
+@media (max-width:1024px){
+
+    :root{
+        --logo-size:150px;
+    }
+
+    .nav-toggle{
+        display:flex;
+    }
+
+    body.nav-open{
+        overflow:hidden;
+    }
+
+    .header-right{
+        position:fixed;
+        top:0;
+        right:0;
+        height:100vh;
+        width:min(320px,80vw);
+        background:var(--header);
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:flex-start;
+        padding:110px 32px 32px;
+        gap:40px;
+        transform:translateX(100%);
+        transition:transform .3s ease;
+        z-index:1050;
+    }
+
+    body.nav-open .header-right{
+        transform:translateX(0);
+    }
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+        padding-top:0;
+    }
+
+    nav a{
+        font-size:28px;
+    }
+
+    .social-links{
+        gap:16px;
+    }
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .project-description{
+        padding-left:60px;
+        padding-top:60px;
+        padding-right:60px;
+    }
+
+    .project-description h1{
+        font-size:52px;
+    }
+
+    .project-description p{
+        font-size:19px;
+    }
+
+    .project-gallery{
+        margin:60px 0 0;
+    }
+
+    .section-title{
+        font-size:48px;
+    }
+
+    .about-photo{
+        aspect-ratio:16/9;
+    }
+
+    .back-arrow-top{
+        position:fixed;
+        top:auto;
+        right:32px;
+        bottom:32px;
+        left:auto;
+        margin:0;
+    }
+}
+
+/* ---------- MÓVIL (≤640px) ---------- */
+
+@media (max-width:640px){
+
+    :root{
+        --logo-size:110px;
+    }
+
+    .header-right{
+        width:min(240px,70vw);
+    }
+
+    /* Header */
+    header{
+        padding:32px 0;
+    }
+
+    nav a{
+        font-size:24px;
+    }
+
+    .social-links img{
+        width:26px;
+        height:26px;
+    }
+
+    /* Grids de proyectos y logofolio */
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo-item{
+        gap:16px;
+    }
+
+    /* Página de proyecto individual */
+    .project-intro{
+        grid-template-columns:1fr;
+        aspect-ratio:auto;
+    }
+
+    .project-preview{
+        aspect-ratio:4/3;
+    }
+
+    .project-description{
+        padding:48px 24px;
+    }
+
+    .project-description h1{
+        font-size:36px;
+    }
+
+    .project-description p{
+        font-size:17px;
+    }
+
+    .project-gallery{
+        grid-template-columns:1fr;
+        margin:48px 0 0;
+    }
+
+    /* Sobre mí */
+    .about-photo{
+        aspect-ratio:4/3;
+    }
+
+    .about-content{
+        padding:32px 0 60px;
+    }
+
+    .about-content .section-title{
+        font-size:36px;
+    }
+
+    .about-content p{
+        font-size:17px;
+    }
+
+    /* Contacto */
+    .section-title{
+        font-size:36px;
+        margin-bottom:36px;
+    }
+
+    .contact-form{
+        gap:18px;
+    }
+
+    .btn-submit{
+        width:100%;
+        text-align:center;
+    }
+
+    /* Flechas */
+    .back-arrow{
+        top:16px;
+        margin:16px 0 -64px 16px;
+        width:40px;
+        height:40px;
+    }
+
+    .back-arrow svg{
+        width:16px;
+        height:16px;
+    }
+
+    .back-arrow-top{
+        top:auto;
+        right:16px;
+        bottom:16px;
+        left:auto;
+        margin:0;
+    }
+
+    /* Lightbox */
+    .lightbox-prev{
+        left:12px;
+    }
+
+    .lightbox-next{
+        right:12px;
+    }
+
+    .lightbox-nav{
+        width:40px;
+        height:40px;
+    }
+
+    .lightbox-close{
+        top:16px;
+        right:16px;
+        font-size:32px;
+    }
+
+    /* Footer */
+    footer{
+        padding-top:40px;
+        padding-bottom:60px;
+    }
+
+    footer p{
+        font-size:18px;
+    }
 }

@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Hidalgo</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+
     <script>
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         document.documentElement.dataset.page = currentPage;
     </script>
 </head>
+
 <body>
+
     <header>
         <div class="container">
+
             <a href="index.html" class="logo" aria-label="Inicio">
                 <video autoplay loop muted playsinline preload="metadata">
                     <source src="videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
             </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+
             <div class="header-right">
+
                 <nav aria-label="Navegación principal">
                     <a href="index.html">PROYECTOS</a>
                     <a href="logofolio.html">LOGOFOLIO</a>
                     <a href="sobremi.html">SOBRE MÍ</a>
                     <a href="contacto.html">CONTACTO</a>
                 </nav>
+
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <img src="images/linkedin.svg" alt="LinkedIn">
                     </a>
+
                     <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
                         <img src="images/behance.svg" alt="Behance">
                     </a>
                 </div>
+
             </div>
         </div>
     </header>
+
     <main>
+
         <a href="index.html" class="back-arrow" id="backArrow" aria-label="Volver a proyectos">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </a>
+
         <section class="project-intro">
+
             <div class="project-preview">
-                <img src="images/elecfox_portada.jpg" alt="Proyecto 3 - Elec Fox Rebranding">
+                <img src="images/manumatt_portada.jpg" alt="ManuMatt & Partners Rebranding">
             </div>
+
             <div class="project-description">
                 <div class="project-text">
-                    <h1>CREATIVIDADES CON ISOTIPO</h1>
+
+                    <h1>ManuMatt & Partners</h1>
+
                     <p>
-                        Una colección de creatividades personales utilizando mi isotipo. Este proyecto reúne experimentos de diferentes técnicas desarrollados como parte de mi identidad visual personal.
+                        Rebranding de ManuMatt & Partners, una consultora especializada en estrategia y comunicación. El proyecto desarrolla una nueva identidad visual y diferentes aplicaciones de marca para reforzar su posicionamiento y comunicación.
                     </p>
+
                 </div>
             </div>
+
         </section>
+
         <section class="project-gallery">
-            <img src="images/elecfox1.jpg">
-            <img src="images/elecfox2.jpg">
-            <img src="images/elecfox3.jpg">
-            <img src="images/elecfox4.jpg">
-            <img src="images/elecfox5.jpg">
-            <img src="images/elecfox6.jpg">
+
+            <img src="images/manumatt1.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
+            <img src="images/manumatt2.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
+            <img src="images/manumatt3.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
+            <img src="images/manumatt4.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
+
         </section>
+
     </main>
+
     <footer>
-        <p>pijus 2026</p>
+        <p>πjus 2026</p>
     </footer>
+
     <div class="lightbox" id="lightbox">
+
         <span class="lightbox-close" id="lightbox-close">&times;</span>
+
         <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </button>
+
         <div class="lightbox-content" id="lightbox-content"></div>
+
         <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l-7-7 7 7"/>
             </svg>
         </button>
+
     </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
