@@ -20,7 +20,38 @@
     --line:#E7E7E7;
     --container:1280px;
     --logo-size:200px;
+
+
+    /* ---------- TIPOGRAFÍA DE PROYECTOS ---------- */
+
+    --project-title-size:72px;
+    --project-text-size:18px;
+
+    --project-title-size-tablet:52px;
+    --project-text-size-tablet:19px;
+
+    --project-title-size-mobile:36px;
+    --project-text-size-mobile:17px;
+
+    --project-title-color:#1f1f1f;
+    --project-text-color:#808080;
+
+
+    /* ---------- TIPOGRAFÍA SOBRE MÍ ---------- */
+
+    --about-title-size:56px;
+    --about-text-size:16px;
+
+    --about-title-size-tablet:48px;
+    --about-text-size-tablet:16px;
+
+    --about-title-size-mobile:36px;
+    --about-text-size-mobile:17px;
+
+    --about-title-color:#1f1f1f;
+    --about-text-color:#808080;
 }
+
 
 /* ---------- RESET ---------- */
 
@@ -372,13 +403,15 @@ html[data-page="contacto"] nav a[href="/contacto/"]{
 
 .project-description h1{
     font-family:"Oswald",sans-serif;
-    font-size:72px;
+    font-size:var(--project-title-size);
+    color:var(--project-title-color);
     margin-bottom:30px;
-    line-height: 1
+    line-height:1;
 }
 
 .project-description p{
-    font-size:22px;
+    font-size:var(--project-text-size);
+    color:var(--project-text-color);
     line-height:1.7;
 }
 
@@ -427,9 +460,9 @@ html[data-page="contacto"] nav a[href="/contacto/"]{
 
 .about-content p{
     font-family:"Geist",sans-serif;
-    font-size:20px;
+    font-size:var(--about-text-size);
     line-height:1.8;
-    color:var(--text);
+    color:var(--about-text-color);
 }
 
 .about-content p + p{
@@ -530,7 +563,8 @@ footer p {
 
 .section-title{
     font-family:"Oswald",sans-serif;
-    font-size:56px;
+    font-size:var(--about-title-size);
+    color:var(--about-title-color);
     margin-bottom:60px;
 }
 
@@ -872,11 +906,11 @@ body.page-loaded .projects-grid .project:nth-child(11) {
     }
 
     .project-description h1{
-        font-size:52px;
+        font-size:var(--project-title-size-tablet);
     }
 
     .project-description p{
-        font-size:19px;
+        font-size:var(--project-text-size-tablet);
     }
 
     .project-gallery{
@@ -884,7 +918,11 @@ body.page-loaded .projects-grid .project:nth-child(11) {
     }
 
     .section-title{
-        font-size:48px;
+        font-size:var(--about-title-size-tablet);
+    }
+
+    .about-content p{
+        font-size:var(--about-text-size-tablet);
     }
 
     .about-photo{
@@ -951,11 +989,11 @@ body.page-loaded .projects-grid .project:nth-child(11) {
     }
 
     .project-description h1{
-        font-size:36px;
+        font-size:var(--project-title-size-mobile);
     }
 
     .project-description p{
-        font-size:17px;
+        font-size:var(--project-text-size-mobile);
     }
 
     .project-gallery{
@@ -973,16 +1011,16 @@ body.page-loaded .projects-grid .project:nth-child(11) {
     }
 
     .about-content .section-title{
-        font-size:36px;
+        font-size:var(--about-title-size-mobile);
     }
 
     .about-content p{
-        font-size:17px;
+        font-size:var(--about-text-size-mobile);
     }
 
     /* Contacto */
     .section-title{
-        font-size:36px;
+        font-size:var(--about-title-size-mobile);
         margin-bottom:36px;
     }
 
