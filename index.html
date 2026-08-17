@@ -9,14 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        let path = window.location.pathname;
+        if (path.endsWith('/') && path !== '/') path = path.slice(0, -1);
+        const segments = path.split('/').filter(Boolean);
+        const currentPage = segments.length ? segments[segments.length - 1] : 'index';
         document.documentElement.dataset.page = currentPage;
     </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="logo" aria-label="Inicio">
+            <a href="/" class="logo" aria-label="Inicio">
                 <video autoplay loop muted playsinline preload="metadata">
                     <source src="videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
@@ -27,10 +30,10 @@
 
             <div class="header-right">
                 <nav aria-label="Navegación principal">
-                    <a href="index.html">PROYECTOS</a>
-                    <a href="logofolio.html">LOGOFOLIO</a>
-                    <a href="sobremi.html">SOBRE MÍ</a>
-                    <a href="contacto.html">CONTACTO</a>
+                    <a href="/">PROYECTOS</a>
+                    <a href="/logofolio/">LOGOFOLIO</a>
+                    <a href="/sobremi/">SOBRE MÍ</a>
+                    <a href="/contacto/">CONTACTO</a>
                 </nav>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

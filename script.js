@@ -119,6 +119,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // =====================================================
+    // COLOCA LOS PROYECTOS MÁS NUEVOS ARRIBA
+    // =====================================================
+
+    document.querySelectorAll('.projects-grid').forEach(function(grid) {
+        Array.from(grid.children).reverse().forEach(function(child) {
+            grid.appendChild(child);
+        });
+    });
+
+
+    // =====================================================
     // MENÚ HAMBURGUESA
     // =====================================================
 
@@ -201,57 +212,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // ---------- FLECHA ATRÁS ----------
+    // ---------- MEMORIA DE SCROLL DEL INDEX ----------
+    // Guarda y restaura la posición de scroll del grid de
+    // proyectos independientemente de cómo se navegue (no
+    // depende de document.referrer ni de window.history,
+    // que en móvil son poco fiables).
 
-    const backArrow = document.getElementById('backArrow');
+    const indexGrid = document.querySelector('#projects .projects-grid');
 
-    if (backArrow) {
+    if (indexGrid) {
 
-        backArrow.addEventListener('click', function(e) {
+        const savedScroll = sessionStorage.getItem('indexScrollY');
 
-            const cameFromSite =
-                document.referrer &&
-                document.referrer.indexOf(window.location.host) !== -1;
+        if (savedScroll !== null) {
+            window.scrollTo(0, parseInt(savedScroll, 10));
+        }
 
-            // Si venimos de nuestro propio index,
-            // usar el historial para conservar la posición de scroll
-            if (
-                cameFromSite &&
-                window.history.length > 1
-            ) {
-
-                e.preventDefault();
-
-                // Guardar posición del isotipo
-                const logoVideo =
-                    document.querySelector('header video');
-
-                if (logoVideo) {
-
-                    sessionStorage.setItem(
-                        'logoVideoTime',
-                        logoVideo.currentTime
-                    );
-
-                }
-
-                // Comenzar fade-out
-                document.body.classList.remove(
-                    'page-transition-in'
-                );
-
-                document.body.classList.add(
-                    'page-transition-out'
-                );
-
-                setTimeout(function() {
-
-                    window.history.back();
-
-                }, 200);
-
-            }
-
+        window.addEventListener('scroll', function() {
+            sessionStorage.setItem('indexScrollY', window.scrollY);
         });
 
     }
@@ -637,12 +615,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-});
-
-    // ---------- COLOCA LOS PROYECTOS MÁS NUEVOS ARRIBA ----------
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.projects-grid').forEach(grid => {
-        Array.from(grid.children).reverse().forEach(child => grid.appendChild(child));
-    });
 });

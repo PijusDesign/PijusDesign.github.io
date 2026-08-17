@@ -7,18 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <script>
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        let path = window.location.pathname;
+        if (path.endsWith('/') && path !== '/') path = path.slice(0, -1);
+        const segments = path.split('/').filter(Boolean);
+        const currentPage = segments.length ? segments[segments.length - 1] : 'index';
         document.documentElement.dataset.page = currentPage;
     </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="logo" aria-label="Inicio">
+            <a href="/" class="logo" aria-label="Inicio">
                 <video autoplay loop muted playsinline preload="metadata">
-                    <source src="videos/Pijus_isotipo.webm" type="video/webm">
+                    <source src="/videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
             </a>
                 <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -28,18 +31,18 @@
 
             <div class="header-right">
                 <nav aria-label="Navegación principal">
-                    <a href="index.html">PROYECTOS</a>
-                    <a href="logofolio.html">LOGOFOLIO</a>
-                    <a href="sobremi.html">SOBRE MÍ</a>
-                    <a href="contacto.html">CONTACTO</a>
+                    <a href="/">PROYECTOS</a>
+                    <a href="/logofolio/">LOGOFOLIO</a>
+                    <a href="/sobremi/">SOBRE MÍ</a>
+                    <a href="/contacto/">CONTACTO</a>
                 </nav>
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="images/linkedin.svg" alt="LinkedIn">
+                        <img src="/images/linkedin.svg" alt="LinkedIn">
                     </a>
                     <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                        <img src="images/behance.svg" alt="Behance">
+                        <img src="/images/behance.svg" alt="Behance">
                     </a>
                 </div>
             </div>
@@ -58,126 +61,126 @@
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_ArrozParaBodas.jpg" alt="Logo Arroz Para Bodas" class="logo-bw">
-                        <img src="images/logofolio_ArrozParaBodas_hover.jpg" alt="Logo Arroz Para Bodas color" class="logo-color">
+                        <img src="/images/logofolio_ArrozParaBodas.jpg" alt="Logo Arroz Para Bodas" class="logo-bw">
+                        <img src="/images/logofolio_ArrozParaBodas_hover.jpg" alt="Logo Arroz Para Bodas color" class="logo-color">
                     </div>
                     <p class="logo-title">Arroz Para Bodas</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_NIZVOS.jpg" alt="Logo Nizvos" class="logo-bw">
-                        <img src="images/logofolio_NIZVOS_hover.jpg" alt="Logo Nizvos color" class="logo-color">
+                        <img src="/images/logofolio_NIZVOS.jpg" alt="Logo Nizvos" class="logo-bw">
+                        <img src="/images/logofolio_NIZVOS_hover.jpg" alt="Logo Nizvos color" class="logo-color">
                     </div>
                     <p class="logo-title">Nizvos</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_ManuMatt.jpg" alt="Logo ManuMatt & Partners" class="logo-bw">
-                        <img src="images/logofolio_ManuMatt_hover.jpg" alt="Logo ManuMatt & Partners color" class="logo-color">
+                        <img src="/images/logofolio_ManuMatt.jpg" alt="Logo ManuMatt & Partners" class="logo-bw">
+                        <img src="/images/logofolio_ManuMatt_hover.jpg" alt="Logo ManuMatt & Partners color" class="logo-color">
                     </div>
                     <p class="logo-title">ManuMatt & Partners</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_ELBERCIAL.jpg" alt="Logo EL BERCIAL DE SAN RAFAEL" class="logo-bw">
-                        <img src="images/logofolio_ELBERCIAL_hover.jpg" alt="Logo El Bercial de San Rafael color" class="logo-color">
+                        <img src="/images/logofolio_ELBERCIAL.jpg" alt="Logo EL BERCIAL DE SAN RAFAEL" class="logo-bw">
+                        <img src="/images/logofolio_ELBERCIAL_hover.jpg" alt="Logo El Bercial de San Rafael color" class="logo-color">
                     </div>
                     <p class="logo-title">EL BERCIAL DE SAN RAFAEL</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_RHINOBURGER.jpg" alt="Logo RHINO BURGER" class="logo-bw">
-                        <img src="images/logofolio_RHINOBURGER_hover.jpg" alt="Logo RHINO BURGER color" class="logo-color">
+                        <img src="/images/logofolio_RHINOBURGER.jpg" alt="Logo RHINO BURGER" class="logo-bw">
+                        <img src="/images/logofolio_RHINOBURGER_hover.jpg" alt="Logo RHINO BURGER color" class="logo-color">
                     </div>
                     <p class="logo-title">RHINO BURGER</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_RAWCREW.jpg" alt="Logo RAW CREW" class="logo-bw">
-                        <img src="images/logofolio_RAWCREW_hover.jpg" alt="Logo RAW CREW color" class="logo-color">
+                        <img src="/images/logofolio_RAWCREW.jpg" alt="Logo RAW CREW" class="logo-bw">
+                        <img src="/images/logofolio_RAWCREW_hover.jpg" alt="Logo RAW CREW color" class="logo-color">
                     </div>
                     <p class="logo-title">RAW CREW</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_DarkChocolatier.jpg" alt="Logo Dark Chocolatier" class="logo-bw">
-                        <img src="images/logofolio_DarkChocolatier_hover.jpg" alt="Logo Dark Chocolatier color" class="logo-color">
+                        <img src="/images/logofolio_DarkChocolatier.jpg" alt="Logo Dark Chocolatier" class="logo-bw">
+                        <img src="/images/logofolio_DarkChocolatier_hover.jpg" alt="Logo Dark Chocolatier color" class="logo-color">
                     </div>
                     <p class="logo-title">Dark Chocolatier</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_kbdmania.jpg" alt="Logo kbdmania" class="logo-bw">
-                        <img src="images/logofolio_kbdmania_hover.jpg" alt="Logo kbdmania color" class="logo-color">
+                        <img src="/images/logofolio_kbdmania.jpg" alt="Logo kbdmania" class="logo-bw">
+                        <img src="/images/logofolio_kbdmania_hover.jpg" alt="Logo kbdmania color" class="logo-color">
                     </div>
                     <p class="logo-title">kbdmania</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_HIDDEN DENIA.jpg" alt="Logo HIDDEN DENIA" class="logo-bw">
-                        <img src="images/logofolio_HIDDEN DENIA_hover.jpg" alt="Logo HIDDEN DENIA color" class="logo-color">
+                        <img src="/images/logofolio_HIDDEN DENIA.jpg" alt="Logo HIDDEN DENIA" class="logo-bw">
+                        <img src="/images/logofolio_HIDDEN DENIA_hover.jpg" alt="Logo HIDDEN DENIA color" class="logo-color">
                     </div>
                     <p class="logo-title">HIDDEN DENIA</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_GEMCULT.jpg" alt="Logo GEMCULT" class="logo-bw">
-                        <img src="images/logofolio_GEMCULT_hover.jpg" alt="Logo GEMCULT color" class="logo-color">
+                        <img src="/images/logofolio_GEMCULT.jpg" alt="Logo GEMCULT" class="logo-bw">
+                        <img src="/images/logofolio_GEMCULT_hover.jpg" alt="Logo GEMCULT color" class="logo-color">
                     </div>
                     <p class="logo-title">GEMCULT</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_FoodSupplAI.jpg" alt="Logo FoodSupplAI" class="logo-bw">
-                        <img src="images/logofolio_FoodSupplAI_hover.jpg" alt="Logo FoodSupplAI color" class="logo-color">
+                        <img src="/images/logofolio_FoodSupplAI.jpg" alt="Logo FoodSupplAI" class="logo-bw">
+                        <img src="/images/logofolio_FoodSupplAI_hover.jpg" alt="Logo FoodSupplAI color" class="logo-color">
                     </div>
                     <p class="logo-title">FoodSupplAI</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_ElecFox.jpg" alt="Logo Elec Fox" class="logo-bw">
-                        <img src="images/logofolio_ElecFox_hover.jpg" alt="Logo Elec Fox color" class="logo-color">
+                        <img src="/images/logofolio_ElecFox.jpg" alt="Logo Elec Fox" class="logo-bw">
+                        <img src="/images/logofolio_ElecFox_hover.jpg" alt="Logo Elec Fox color" class="logo-color">
                     </div>
                     <p class="logo-title">Elec Fox</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_Celeste.jpg" alt="Logo Celeste" class="logo-bw">
-                        <img src="images/logofolio_Celeste_hover.jpg" alt="Logo Celeste color" class="logo-color">
+                        <img src="/images/logofolio_Celeste.jpg" alt="Logo Celeste" class="logo-bw">
+                        <img src="/images/logofolio_Celeste_hover.jpg" alt="Logo Celeste color" class="logo-color">
                     </div>
                     <p class="logo-title">Celeste</p>
                 </div>
 
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_BUG.jpg" alt="Logo BUG//" class="logo-bw">
-                        <img src="images/logofolio_BUG_hover.jpg" alt="Logo BUG// color" class="logo-color">
+                        <img src="/images/logofolio_BUG.jpg" alt="Logo BUG//" class="logo-bw">
+                        <img src="/images/logofolio_BUG_hover.jpg" alt="Logo BUG// color" class="logo-color">
                     </div>
                     <p class="logo-title">BUG//</p>
                 </div>
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_AnaWolf.jpg" alt="Logo Ana Wolf" class="logo-bw">
-                        <img src="images/logofolio_AnaWolf_hover.jpg" alt="Logo Ana Wolf color" class="logo-color">
+                        <img src="/images/logofolio_AnaWolf.jpg" alt="Logo Ana Wolf" class="logo-bw">
+                        <img src="/images/logofolio_AnaWolf_hover.jpg" alt="Logo Ana Wolf color" class="logo-color">
                     </div>
                     <p class="logo-title">Ana Wolf</p>
                 </div>
                 <div class="logo-item">
                     <div class="logo-image">
-                        <img src="images/logofolio_VertexEngine.jpg" alt="Logo Vertex Engine" class="logo-bw">
-                        <img src="images/logofolio_VertexEngine_hover.jpg" alt="Logo Vertex Engine color" class="logo-color">
+                        <img src="/images/logofolio_VertexEngine.jpg" alt="Logo Vertex Engine" class="logo-bw">
+                        <img src="/images/logofolio_VertexEngine_hover.jpg" alt="Logo Vertex Engine color" class="logo-color">
                     </div>
                     <p class="logo-title">Vertex Engine</p>
                 </div>
@@ -190,6 +193,6 @@
         <p>πjus 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>

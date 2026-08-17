@@ -173,23 +173,23 @@ body.nav-open .nav-toggle span:nth-child(3){
 }
 
 /* PROYECTOS */
-html[data-page="index.html"] nav a[href="index.html"],
-html[data-page^="proyecto"] nav a[href="index.html"]{
+html[data-page="index"] nav a[href="/"],
+html[data-page^="proyecto"] nav a[href="/"]{
     opacity:.5;
 }
 
 /* LOGOFOLIO */
-html[data-page="logofolio.html"] nav a[href="logofolio.html"]{
+html[data-page="logofolio"] nav a[href="/logofolio/"]{
     opacity:.5;
 }
 
 /* SOBRE MÍ */
-html[data-page="sobremi.html"] nav a[href="sobremi.html"]{
+html[data-page="sobremi"] nav a[href="/sobremi/"]{
     opacity:.5;
 }
 
 /* CONTACTO */
-html[data-page="contacto.html"] nav a[href="contacto.html"]{
+html[data-page="contacto"] nav a[href="/contacto/"]{
     opacity:.5;
 }
 
@@ -910,7 +910,7 @@ body.page-loaded .projects-grid .project:nth-child(11) {
     }
 
     .header-right{
-        width:min(240px,70vw);
+        width:min(240px,60vw);
     }
 
     /* Header */
