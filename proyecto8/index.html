@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Hidalgo</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="/style.css">
     <script>
         let path = window.location.pathname;
         if (path.endsWith('/') && path !== '/') path = path.slice(0, -1);
@@ -20,109 +16,81 @@
         document.documentElement.dataset.page = currentPage;
     </script>
 </head>
-
 <body>
-
     <header>
         <div class="container">
-
             <a href="/" class="logo" aria-label="Inicio">
                 <video autoplay loop muted playsinline preload="metadata">
-                    <source src="videos/Pijus_isotipo.webm" type="video/webm">
+                    <source src="/videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
             </a>
                 <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
 
-
             <div class="header-right">
-
                 <nav aria-label="Navegación principal">
                     <a href="/">PROYECTOS</a>
                     <a href="/logofolio/">LOGOFOLIO</a>
                     <a href="/sobremi/">SOBRE MÍ</a>
                     <a href="/contacto/">CONTACTO</a>
                 </nav>
-
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="images/linkedin.svg" alt="LinkedIn">
+                        <img src="/images/linkedin.svg" alt="LinkedIn">
                     </a>
-
                     <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                        <img src="images/behance.svg" alt="Behance">
+                        <img src="/images/behance.svg" alt="Behance">
                     </a>
                 </div>
-
             </div>
         </div>
     </header>
-
     <main>
-
         <a href="/" class="back-arrow" id="backArrow" aria-label="Volver a proyectos">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </a>
-
         <section class="project-intro">
-
             <div class="project-preview">
-                <img src="images/manumatt_portada.jpg" alt="ManuMatt & Partners Rebranding">
+                <img src="/images/tomati&co_portada.jpg" alt="Proyecto 8 - Tomati&Co Comunicación Visual">
             </div>
-
             <div class="project-description">
                 <div class="project-text">
-
-                    <h1>ManuMatt & Partners</h1>
-
+                    <h1>Tomati&Co</h1>
                     <p>
-                        Rebranding de ManuMatt & Partners, una consultora especializada en estrategia y comunicación. El proyecto desarrolla una nueva identidad visual y diferentes aplicaciones de marca para reforzar su posicionamiento y comunicación.
+                        Trabajo integral de comunicación visual para el quiosco físico de Tomati&Co en Almería: vídeos para pantallas interior y exterior, publicidad impresa de temporada, diseño de etiquetas y anuncios de nuevos productos como la emulsión de cherry y albahaca, dípticos, trípticos y distintos formatos de packaging para Dia.
                     </p>
-
                 </div>
             </div>
-
         </section>
-
         <section class="project-gallery">
-
-            <img src="images/manumatt1.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
-            <img src="images/manumatt2.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
-            <img src="images/manumatt3.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
-            <img src="images/manumatt4.jpg" alt="ManuMatt & Partners - Aplicación de identidad visual">
-
+            <img src="/images/tomati&co1.png">
+            <img src="/images/tomati&co2.jpg">
+            <img src="/images/tomati&co3.png">
+            <img src="/images/tomati&co4.jpg">
+            <img src="/images/tomati&co5.jpg">
+            <img src="/images/tomati&co6.jpg">
         </section>
-
     </main>
-
     <footer>
         <p>πjus 2026</p>
     </footer>
-
     <div class="lightbox" id="lightbox">
-
         <span class="lightbox-close" id="lightbox-close">&times;</span>
-
         <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </button>
-
         <div class="lightbox-content" id="lightbox-content"></div>
-
         <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l-7-7 7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
         </button>
-
     </div>
-
-    <script src="script.js"></script>
-
+    <script src="/script.js"></script>
 </body>
 </html>

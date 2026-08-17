@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <script>
         let path = window.location.pathname;
         if (path.endsWith('/') && path !== '/') path = path.slice(0, -1);
@@ -21,7 +21,7 @@
         <div class="container">
             <a href="/" class="logo" aria-label="Inicio">
                 <video autoplay loop muted playsinline preload="metadata">
-                    <source src="videos/Pijus_isotipo.webm" type="video/webm">
+                    <source src="/videos/Pijus_isotipo.webm" type="video/webm">
                 </video>
             </a>
                 <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -39,10 +39,10 @@
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/πjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="images/linkedin.svg" alt="LinkedIn">
+                        <img src="/images/linkedin.svg" alt="LinkedIn">
                     </a>
                     <a href="https://www.behance.net/Pijuss" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                        <img src="images/behance.svg" alt="Behance">
+                        <img src="/images/behance.svg" alt="Behance">
                     </a>
                 </div>
             </div>
@@ -58,26 +58,26 @@
 
         <section class="project-intro">
             <div class="project-preview">
-                <img src="images/arrozparabodas_portada.jpeg" alt="Proyecto 5 - ArrozParaBodas Branding">
+                <img src="/images/foodsupplai_portada.jpg" alt="Proyecto 7 - FoodSupplAI Branding">
             </div>
 
             <div class="project-description">
                 <div class="project-text">
-                    <h1>Arroz Para Bodas</h1>
+                    <h1>FoodSupplAI</h1>
                     <p>
-                        Packaging ecológico para bodas, un producto nacido en ManuMatt para el sector nupcial que aprovecha arroz descartado por imperfecciones visuales. Parte de la venta del expositor se destina, a través de la Fundación Banco de Alimentos, a donar comidas a familias necesitadas.
+                        Diseño de logotipo e identidad de marca para FoodSupplAI, una startup que desarrolla una aplicación para optimizar la distribución de alimentos entre empresas mediante inteligencia artificial.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="project-gallery">
-            <img src="images/arrozparabodas1.jpeg">
-            <img src="images/arrozparabodas2.jpeg">
-            <img src="images/arrozparabodas3.jpeg">
-            <img src="images/arrozparabodas4.jpeg">
-            <img src="images/arrozparabodas5.jpeg">
-            <img src="images/arrozparabodas6.jpeg">
+            <img src="/images/foodsupplai1.jpg">
+            <img src="/images/foodsupplai2.jpg">
+            <img src="/images/foodsupplai3.jpg">
+            <img src="/images/foodsupplai4.jpg">
+            <img src="/images/foodsupplai5.jpg">
+            <img src="/images/foodsupplai6.jpg">
         </section>
     </main>
 
@@ -98,11 +98,11 @@
 
         <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7-7 7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
         </button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
